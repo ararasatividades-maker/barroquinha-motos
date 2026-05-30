@@ -211,7 +211,110 @@
     </section>
 
     <div class="section-divider max-w-7xl mx-auto"></div>
+<!-- DIAGNÓSTICO AUTOMÁTICO BARROQUINHA -->
+<div style="max-width: 500px; margin: 30px auto; padding: 25px; background: #1a1a1a; color: white; border-radius: 15px; border: 2px solid #25D366;">
+  <h3 style="text-align: center; margin-bottom: 20px;">🤖 Diagnóstico Rápido IA</h3>
+  <p style="text-align: center; font-size: 14px; margin-bottom: 20px;">Responda e descubra o possível problema da sua moto</p>
+  
+  <label style="display: block; margin-bottom: 5px; font-weight: bold;">1. Sua moto é:</label>
+  <select id="tipoMoto" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; color: #333;">
+    <option value="">Selecione...</option>
+   <option value="">Selecione sua moto...</option>
+<option value="Honda Fan 150">Honda Fan 150</option>
+<option value="Honda Start 160">Honda Start 160</option>
+<option value="Honda Fan 160">Honda Fan 160</option>
+<option value="Honda Bros 150">Honda Bros 150</option>
+<option value="Honda Bros 160">Honda Bros 160</option>
+<option value="Honda XRE 190">Honda XRE 190</option>
+<option value="Honda Pop 100">Honda Pop 100</option>
+<option value="Honda Pop 110i">Honda Pop 110i</option>
+<option value="Honda Biz 125">Honda Biz 125</option>
+<option value="Yamaha Crosser 150">Yamaha Crosser 150</option>
+<option value="Yamaha Factor 125">Yamaha Factor 125</option>
+<option value="Yamaha Factor 150">Yamaha Factor 150</option>
+<option value="Outra">Outra - Escrever no WhatsApp</option> 
+  </select>
+  
+  <label style="display: block; margin-bottom: 5px; font-weight: bold;">2. Principal sintoma:</label>
+  <select id="sintoma" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; color: #333;">
+    <option value="">Selecione...</option>
+    <option value="Barulho no motor">Barulho estranho no motor</option>
+    <option value="Dificuldade para ligar">Dificuldade para ligar</option>
+    <option value="Perda de força">Perda de força/engasgando</option>
+    <option value="Fumaça no escapamento">Fumaça no escapamento</option>
+    <option value="Freio ruim">Freio fraco/barulhento</option>
+    <option value="Vazamento">Vazando óleo/gasolina</option>
+  </select>
+  
+  <label style="display: block; margin-bottom: 5px; font-weight: bold;">3. Seu nome:</label>
+  <input type="text" id="nomeCliente" placeholder="Digite seu nome" style="width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 8px; color: #333;">
+  
+  <button onclick="fazerDiagnostico()" style="width: 100%; padding: 15px; background: #25D366; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">
+    🔍 FAZER DIAGNÓSTICO
+  </button>
+  
+  <div id="resultadoIA" style="margin-top: 20px; padding: 15px; background: #333; border-radius: 8px; display: none;"></div>
+</div>
 
+<script>
+function fazerDiagnostico() {
+  var seuNumero = "5585987528176"; // TROCA PELO SEU NÚMERO
+  
+  var moto = document.getElementById('tipoMoto').value;
+  var sintoma = document.getElementById('sintoma').value;
+  var nome = document.getElementById('nomeCliente').value;
+  
+  if (moto === "" || sintoma === "" || nome === "") {
+    alert("Preenche todos os campos pra fazer o diagnóstico!");
+    return;
+  }
+  
+  // LÓGICA DA "MINI IA" - CHUTA O DIAGNÓSTICO
+  var diagnostico = "";
+  var urgencia = "";
+  
+  if (sintoma === "Barulho no motor") {
+    diagnostico = "Possível: Válvulas desreguladas ou corrente de comando gasta";
+    urgencia = "⚠️ Médio - Recomendo revisão em até 15 dias";
+  } else if (sintoma === "Dificuldade para ligar") {
+    diagnostico = "Possível: Bateria fraca, vela gasta ou carburador sujo";
+    urgencia = "⚠️ Médio - Pode te deixar na rua";
+  } else if (sintoma === "Perda de força") {
+    diagnostico = "Possível: Filtro de ar sujo, vela ruim ou problema na injeção";
+    urgencia = "⚠️ Médio - Consumo vai aumentar";
+  } else if (sintoma === "Fumaça no escapamento") {
+    diagnostico = "Possível: Queima de óleo - anéis ou retentores gastos";
+    urgencia = "🔴 ALTO - Procure oficina urgente";
+  } else if (sintoma === "Freio ruim") {
+    diagnostico = "Possível: Pastilha gasta ou disco empenado";
+    urgencia = "🔴 URGENTE - Risco de acidente";
+  } else if (sintoma === "Vazamento") {
+    diagnostico = "Possível: Junta ou retentor estourado";
+    urgencia = "🔴 ALTO - Pode fundir o motor";
+  }
+  
+  // MOSTRA O RESULTADO NA TELA
+  var resultadoDiv = document.getElementById('resultadoIA');
+  resultadoDiv.innerHTML = `
+    <h4>📋 Diagnóstico Prévio:</h4>
+    <p><strong>${diagnostico}</strong></p>
+    <p>${urgencia}</p>
+    <p style="font-size: 12px; margin-top: 10px;">*Este é um diagnóstico automático. Confirme na oficina.</p>
+    <button onclick="enviarZap('${nome}', '${moto}', '${sintoma}', '${diagnostico}')" style="width: 100%; padding: 12px; background: #25D366; color: white; border: none; border-radius: 8px; margin-top: 10px; font-weight: bold;">
+      📲 Enviar pra Barroquinha Motos
+    </button>
+  `;
+  resultadoDiv.style.display = 'block';
+}
+
+function enviarZap(nome, moto, sintoma, diagnostico) {
+  var seuNumero = "5585987528176"; // TROCA PELO SEU NÚMERO
+  var mensagem = `*DIAGNÓSTICO PELO SITE* 🤖%0A%0A*Nome:* ${nome}%0A*Moto:* ${moto}%0A*Sintoma:* ${sintoma}%0A%0A*IA do site disse:* ${diagnostico}%0A%0AQuero agendar uma avaliação!`;
+  var linkWhats = `https://wa.me/${seuNumero}?text=${mensagem}`;
+  window.open(linkWhats, '_blank');
+}
+</script>
+<!-- FIM DIAGNÓSTICO -->
     <!-- Óleos com Foto -->
 <section id="oleos" class="py-16 sm:py-20 px-4">
     <div class="max-w-7xl mx-auto">
