@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barroquinha Motos - Oficina Especializada em Motos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root {
+        --primary: #dc2626;
+        --primary-dark: #b91c1c;
+        --bg-dark: #0a0a0a;
+        --bg-card: #141414;
+        --bg-hover: #1f1f1f;
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-dark);
+        color: #ffffff;
+        overflow-x: hidden;
+    }
+    
+    .hero-gradient {
+        background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://i.imgur.com/172JIdc.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .card-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(220, 38, 38, 0.6);
+    }
+    
+    .btn-whatsapp {
+        background: #25D366;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    }
+    
+    .btn-whatsapp:hover {
+        background: #1da851;
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+    }
+    
+    .floating-whatsapp {
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    
+    .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+    
+    .table-row {
+        transition: background 0.2s ease;
+    }
+    
+    .table-row:hover {
+        background: var(--bg-hover);
+    }
+    
+    .glow-text {
+        text-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+    }
+    
+    .glass-effect {
+        background: rgba(20, 20, 20, 0.7);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(220, 38, 38, 0.2);
+    }
+</style>
+</head>
+<body>
+    <!-- Preload logo for JS access -->
+        <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5585987528176?text=Olá! Gostaria de mais informações sobre os serviços da Barroquinha Motos" 
+       target="_blank" 
+       class="floating-whatsapp fixed bottom-6 right-6 z-50 btn-whatsapp text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="glass-effect sticky top-0 z-40 border-b border-red-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <h1 class="text-4xl font-bold text-center mx-auto mb-6">
+  <span class="text-white">Barroquinha</span> 
+  <span class="text-red-600">Motos</span>
+</h1>                     <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold text-white">BARROQUINHA <span class="text-red-600">MOTOS</span></h1>
+                    </div>
+                </div>
+                <a href="https://wa.me/5585987528176?text=Olá! Gostaria de agendar um serviço na Barroquinha Motos" 
+                   target="_blank"
+                   class="btn-primary text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-semibold text-sm sm:text-base flex items-center gap-2">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="hidden sm:inline">Agendar pelo WhatsApp</span>
+                    <span class="sm:hidden">Agendar</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-16 sm:py-24 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-8">
+                
+            </div>
+            <h2 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 glow-text">
+                Sua moto em <span class="text-red-600">boas mãos</span>
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Oficina especializada com serviço de qualidade, preço justo e atendimento rápido em Fortaleza. 
+                Cuidamos da sua moto como se fosse nossa!
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://wa.me/5585987528176?text=Olá! Gostaria de agendar um serviço" 
+                   target="_blank"
+                   class="btn-primary text-white px-8 py-4 rounded-lg font-bold text-lg flex items-center gap-3 w-full sm:w-auto justify-center">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    Falar com Mecânico
+                </a>
+                <a href="#servicos" 
+                   class="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg border border-red-600/50 transition-all w-full sm:w-auto justify-center flex items-center gap-2">
+                    <i class="fas fa-wrench"></i>
+                    Ver Serviços
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Agendamentos Rápidos -->
+    <section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-transparent to-black/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <i class="fas fa-bolt text-red-600"></i> Agendamentos Rápidos
+                </h3>
+                <p class="text-gray-400 text-lg">Escolha o serviço e agende agora pelo WhatsApp</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                <a href="https://wa.me/5585987528176?text=Olá, quero agendar uma revisão na Barroquinha Motos" 
+                   target="_blank"
+                   class="card-hover bg-gradient-to-br from-red-600 to-red-800 p-6 rounded-xl text-center">
+                    <i class="fas fa-clipboard-check text-4xl mb-4"></i>
+                    <h4 class="font-bold text-lg mb-2">Agendar Revisão</h4>
+                    <p class="text-sm text-red-100">Check-up completo</p>
+                </a>
+                <a href="https://wa.me/5585987528176?text=Olá, quero agendar uma troca de óleo na Barroquinha Motos" 
+                   target="_blank"
+                   class="card-hover bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl text-center border border-red-600/30">
+                    <i class="fas fa-oil-can text-4xl mb-4 text-red-600"></i>
+                    <h4 class="font-bold text-lg mb-2">Troca de Óleo</h4>
+                    <p class="text-sm text-gray-400">Óleos de qualidade</p>
+                </a>
+                <a href="https://wa.me/5585987528176?text=Olá, quero agendar uma revisão geral na Barroquinha Motos" 
+                   target="_blank"
+                   class="card-hover bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl text-center border border-red-600/30">
+                    <i class="fas fa-tools text-4xl mb-4 text-red-600"></i>
+                    <h4 class="font-bold text-lg mb-2">Revisão Geral</h4>
+                    <p class="text-sm text-gray-400">Completa e detalhada</p>
+                </a>
+                <a href="https://wa.me/5585987528176?text=Olá, quero agendar uma manutenção preventiva na Barroquinha Motos" 
+                   target="_blank"
+                   class="card-hover bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl text-center border border-red-600/30">
+                    <i class="fas fa-shield-alt text-4xl mb-4 text-red-600"></i>
+                    <h4 class="font-bold text-lg mb-2">Manutenção Preventiva</h4>
+                    <p class="text-sm text-gray-400">Evite problemas</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Óleos com Foto -->
+<section id="oleos" class="py-16 sm:py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                <i class="fas fa-oil-can text-red-600"></i> Nossos Óleos
+            </h3>
+            <p class="text-gray-400 text-lg">Trabalhamos com as melhores marcas do mercado</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- Mobil 20W50 -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center">
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/WzpPnWCP/oleo-para-motor-mineral-4t-sae-20w-50-1l-mobil-super-moto-2311-2-9969e7178252527e9d48a5afa4acfd97.webp" alt="Mobil Super Moto 20W50" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Mobil Super Moto</h4>
+                    <p class="text-gray-400 text-sm mb-3">20W50 Mineral</p>
+                    <p class="text-2xl font-extrabold text-red-500 mb-4">R$ 39,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Mobil 20W50" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lubrax 20W50 -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center">
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/hvRBd4bJ/lubrax-20w50-top-turbo-sl-1l-1-20251217144402-d2e90f037feb.webp" alt="Lubrax 20W50" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Lubrax Top Turbo</h4>
+                    <p class="text-gray-400 text-sm mb-3">20W50 SL</p>
+                    <p class="text-2xl font-extrabold text-red-500 mb-4">R$ 38,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Lubrax 20W50" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lubrax 10W30 -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center">
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/Pr4jCjLw/3787-oleo-lubrax-essencial-indicc-sl-10w30-semissintetico-moto-4t-1l-f22b250153e69cfde71776369582878.webp" alt="Lubrax 10W30" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Lubrax Essencial</h4>
+                    <p class="text-gray-400 text-sm mb-3">10W30 Semissintético</p>
+                    <p class="text-2xl font-extrabold text-red-500 mb-4">R$ 46,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Lubrax 10W30" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ipiranga 20W50 -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center">
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/FzV2kyHT/leo-mineral-4t-20w50-moto-carburada-original-ipira-1-20250916164440-fa7ed6a32b98.webp" alt="Ipiranga 20W50" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Ipiranga</h4>
+                    <p class="text-gray-400 text-sm mb-3">20W50 Mineral</p>
+                    <p class="text-2xl font-extrabold text-red-500 mb-4">R$ 37,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Ipiranga 20W50" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ipiranga 10W30 -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center">
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/BQNrqBy2/oleo-mineral-4t-10w30-moto-injetada-original-ipiranga-27129-1-9c7caadcea7e7772e9ceee38b8706376.webp" alt="Ipiranga 10W30" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Ipiranga</h4>
+                    <p class="text-gray-400 text-sm mb-3">10W30 Mineral</p>
+                    <p class="text-2xl font-extrabold text-red-500 mb-4">R$ 43,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Ipiranga 10W30" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Moto 4T Extreme -->
+            <div class="card-hover glass-effect rounded-xl overflow-hidden text-center border-2 border-green-600/50">
+                <div class="bg-green-600 text-white text-xs font-bold py-1">MAIS BARATO</div>
+                <div class="bg-white p-6 h-48 flex items-center justify-center">
+                    <img src="https://i.postimg.cc/LXd7yCYm/MOTO-4T-EXTREME-20W50-ECONOLINE-1L.webp" alt="Moto 4T Extreme" class="max-h-full object-contain">
+                </div>
+                <div class="p-5">
+                    <h4 class="font-bold text-xl mb-1">Moto 4T Extreme</h4>
+                    <p class="text-gray-400 text-sm mb-3">20W50 Econoline</p>
+                    <p class="text-2xl font-extrabold text-green-500 mb-4">R$ 27,00</p>
+                    <a href="https://wa.me/5585987528176?text=Olá, quero comprar o óleo Moto 4T Extreme 20W50" target="_blank"
+                       class="btn-whatsapp w-full text-white py-2.5 rounded-lg font-semibold text-sm flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="glass-effect p-6 rounded-xl max-w-2xl mx-auto text-center mt-10">
+            <p class="text-sm text-gray-400">
+                <i class="fas fa-info-circle text-red-600"></i> Preços sujeitos a alteração. Mão de obra não inclusa. Consulte disponibilidade.
+            </p>
+        </div>
+    </div>
+</section>
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Nossos Serviços -->
+    <section id="servicos" class="py-16 sm:py-20 px-4 bg-gradient-to-b from-black/40 to-transparent">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <i class="fas fa-motorcycle text-red-600"></i> Nossos Serviços
+                </h3>
+                <p class="text-gray-400 text-lg">Especialistas em tudo que sua moto precisa</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-oil-can text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Troca de Óleo</h4>
+                    <p class="text-gray-400">Óleos de primeira linha e filtros originais para máxima proteção do motor</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clipboard-list text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Revisão Completa</h4>
+                    <p class="text-gray-400">Check-up detalhado de todos os componentes da sua moto</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Sistema Elétrico</h4>
+                    <p class="text-gray-400">Diagnóstico e reparo de bateria, farol, seta e sistema de ignição</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-compact-disc text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Freios</h4>
+                    <p class="text-gray-400">Troca de pastilhas, discos, lonas e manutenção do sistema de freio</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-car-bump text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Suspensão</h4>
+                    <p class="text-gray-400">Amortecedores, bengalas e manutenção completa da suspensão</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-red-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cog text-3xl text-red-600"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Motor</h4>
+                    <p class="text-gray-400">Retífica, regulagem de válvulas e reparos especializados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Dicas do Mecânico -->
+    <section class="py-16 sm:py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <i class="fas fa-lightbulb text-red-600"></i> Dicas do Mecânico
+                </h3>
+                <p class="text-gray-400 text-lg">Cuide bem da sua moto com essas dicas profissionais</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-hover glass-effect p-8 rounded-xl">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Quando trocar o óleo?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Troque o óleo a cada 1.000 a 3.000 km ou conforme manual da sua moto. Óleo velho causa desgaste prematuro do motor e aumenta o consumo.
+                    </p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-link"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Como cuidar da relação?</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Lubrifique a corrente a cada 500 km e mantenha a tensão correta. Uma relação bem cuidada dura até 3x mais e evita acidentes.
+                    </p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl">
+                    <div class="text-red-600 text-4xl mb-4">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4 class="font-bold text-xl mb-3">Calibragem dos pneus</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Calibre semanalmente com a moto fria. Pneu vazio gasta mais combustível e pneu cheio demais perde aderência. Segurança em primeiro lugar!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Formas de Pagamento -->
+    <section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-transparent to-black/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <i class="fas fa-credit-card text-red-600"></i> Formas de Pagamento
+                </h3>
+                <p class="text-gray-400 text-lg">Facilitamos para você</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <i class="fas fa-qrcode text-5xl text-red-600 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">PIX</h4>
+                    <p class="text-gray-400">Rápido e seguro</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <i class="fas fa-credit-card text-5xl text-red-600 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Cartão</h4>
+                    <p class="text-gray-400">Crédito ou Débito</p>
+                </div>
+                <div class="card-hover glass-effect p-8 rounded-xl text-center">
+                    <i class="fas fa-money-bill-wave text-5xl text-red-600 mb-4"></i>
+                    <h4 class="font-bold text-xl mb-2">Dinheiro</h4>
+                    <p class="text-gray-400">À vista com desconto</p>
+                </div>
+            </div>
+            <div class="glass-effect p-8 rounded-xl max-w-md mx-auto text-center">
+                <i class="fas fa-qrcode text-6xl text-red-600 mb-4"></i>
+                <h4 class="font-bold text-2xl mb-2">Pague com PIX</h4>
+                <p class="text-gray-400 mb-4">Escaneie o QR Code na oficina</p>
+                <div class="bg-zinc-900 rounded-lg p-8 border-2 border-dashed border-red-600/30">
+                    <i class="fas fa-image text-4xl text-gray-600 mb-2"></i>
+                    <p class="text-sm text-gray-500">QR Code disponível na oficina</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Avaliações -->
+    <section class="py-16 sm:py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl sm:text-4xl font-bold mb-4">
+                    <i class="fas fa-star text-red-600"></i> Avaliações
+                </h3>
+                <p class="text-gray-400 text-lg">O que nossos clientes dizem</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex text-yellow-500 mb-4 text-xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"Melhor oficina de Fortaleza! Atendimento top e preço justo. Minha moto ficou zero!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-bold">JS</div>
+                        <div>
+                            <p class="font-semibold">João Silva</p>
+                            <p class="text-sm text-gray-500">Honda CG 160</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex text-yellow-500 mb-4 text-xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"Serviço rápido e de qualidade. Resolveu o problema da minha moto em 1 dia. Recomendo!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-bold">MA</div>
+                        <div>
+                            <p class="font-semibold">Maria Alves</p>
+                            <p class="text-sm text-gray-500">Yamaha Factor 150</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect p-8 rounded-xl">
+                    <div class="flex text-yellow-500 mb-4 text-xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-4 italic">"Profissionais honestos e competentes. Explicam tudo direitinho antes de fazer o serviço."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center font-bold">PC</div>
+                        <div>
+                            <p class="font-semibold">Pedro Costa</p>
+                            <p class="text-sm text-gray-500">Honda Biz 125</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-7xl mx-auto"></div>
+
+    <!-- Localização e Horário -->
+    <section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-transparent to-black/40">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Mapa -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">
+                        <i class="fas fa-map-marker-alt text-red-600"></i> Localização
+                    </h3>
+                    <div class="glass-effect rounded-xl overflow-hidden mb-4">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.345!2d-38.6!3d-3.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+Dr.+Per%C3%ADlio+Teixeira%2C+715+-+Conjunto+Cear%C3%A1%2C+Fortaleza+-+CE!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                            width="100%" 
+                            height="350" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    <div class="glass-effect p-6 rounded-xl">
+                        <p class="text-lg mb-4">
+                            <i class="fas fa-location-dot text-red-600"></i>
+                            <strong>Rua Dr. Perílio Teixeira, 715</strong><br>
+                            <span class="text-gray-400 ml-6">Conjunto Ceará, Fortaleza - CE</span>
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Dr.+Perílio+Teixeira+715+Conjunto+Ceará+Fortaleza+CE" 
+                               target="_blank"
+                               class="btn-primary text-white px-6 py-3 rounded-lg font-semibold text-center flex items-center justify-center gap-2">
+                                <i class="fas fa-map"></i> Abrir no Google Maps
+                            </a>
+                            <a href="https://www.google.com/maps/dir//Rua+Dr.+Perílio+Teixeira+715+Conjunto+Ceará+Fortaleza+CE" 
+                               target="_blank"
+                               class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold text-center border border-red-600/50 transition-all flex items-center justify-center gap-2">
+                                <i class="fas fa-route"></i> Como Chegar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horário e FAQ -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">
+                            <i class="fas fa-clock text-red-600"></i> Horário de Funcionamento
+                        </h3>
+                        <div class="glass-effect p-8 rounded-xl">
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center pb-4 border-b border-gray-800">
+                                    <span class="font-semibold text-lg">Segunda a Sexta</span>
+                                    <span class="text-red-500 font-bold text-lg">8h às 18h</span>
+                                </div>
+                                <div class="flex justify-between items-center pb-4 border-b border-gray-800">
+                                    <span class="font-semibold text-lg">Sábado</span>
+                                    <span class="text-red-500 font-bold text-lg">8h às 12h</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-semibold text-lg">Domingo</span>
+                                    <span class="text-gray-500 font-bold text-lg">Fechado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6">
+                            <i class="fas fa-question-circle text-red-600"></i> FAQ
+                        </h3>
+                        <div class="space-y-3">
+                            <details class="glass-effect p-5 rounded-xl group">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    Quanto tempo demora uma revisão?
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-red-600"></i>
+                                </summary>
+                                <p class="text-gray-400 mt-3">Uma revisão completa leva em média 2 a 4 horas, dependendo do estado da moto. Para serviços rápidos como troca de óleo, apenas 30 minutos.</p>
+                            </details>
+                            <details class="glass-effect p-5 rounded-xl group">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    Precisa agendar?
+                                    <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-red-600
