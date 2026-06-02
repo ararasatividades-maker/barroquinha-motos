@@ -576,34 +576,29 @@ function enviarZap(nome, moto, sintoma, diagnostico) {
 
     <div class="section-divider max-w-7xl mx-auto"></div>
 
-   <!-- AVALIAÇÕES COM FACEBOOK - CORRIGIDO -->
+   <!-- AVALIAÇÕES SIMPLES - COMMENTBOX -->
 <section class="py-16 sm:py-20 px-4">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
             <h3 class="text-3xl sm:text-4xl font-bold mb-4">
-                <i class="fab fa-facebook text-blue-600"></i> Avaliações dos Clientes
+                <i class="fas fa-comments text-blue-500"></i> Avaliações dos Clientes
             </h3>
-            <p class="text-gray-400 text-lg">Deixe sua opinião usando seu Facebook</p>
+            <p class="text-gray-400 text-lg">Deixe sua opinião aqui</p>
         </div>
         
-        <div class="glass-effect p-8 rounded-xl bg-gray-900">
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous" 
-                src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=966242223397117">
+        <div class="glass-effect p-8 rounded-xl">
+            <div class="commentbox"></div>
+            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+            <script>
+                commentBox('5759856842137600-proj', {
+                    backgroundColor: '#1a1a1a',
+                    textColor: '#ffffff'
+                })
             </script>
-            
-            <div class="fb-comments" 
-                data-href="https://ararasatividades-maker.github.io/barroquinha-motos/" 
-                data-width="100%" 
-                data-numposts="5"
-                data-colorscheme="dark"
-                data-lazy="true">
-            </div>
         </div>
     </div>
 </section>
-<!-- FIM AVALIAÇÕES FACEBOOK --> 
-    <div class="section-divider max-w-7xl mx-auto"></div>
+<!-- FIM AVALIAÇÕES -->
 
     <!-- Localização e Horário -->
     <section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-transparent to-black/40">
