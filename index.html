@@ -576,31 +576,82 @@ function enviarZap(nome, moto, sintoma, diagnostico) {
 
     <div class="section-divider max-w-7xl mx-auto"></div>
 
- <!-- AVALIAÇÕES BARROQUINHA MOTOS -->
+<!-- AVALIAÇÕES BARROQUINHA MOTOS - ESTILO CUSTOM -->
 <section class="py-16 sm:py-20 px-4">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
-            <h3 class="text-3xl sm:text-4xl font-bold mb-4">
-                <i class="fas fa-comments text-blue-500"></i> Avaliações dos Clientes
+            <h3 class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                <i class="fas fa-star text-yellow-400"></i> Avaliações dos Clientes
             </h3>
-            <p class="text-gray-400 text-lg">Deixe sua opinião sobre a Barroquinha Motos</p>
+            <p class="text-gray-400 text-lg">Conte sua experiência com a Barroquinha Motos</p>
         </div>
         
-        <div class="glass-effect p-8 rounded-xl bg-gray-900">
+        <!-- Caixa de comentários estilizada -->
+        <div class="glass-effect p-6 sm:p-10 rounded-2xl border border-blue-500/20 shadow-2xl shadow-blue-500/10">
             <div class="commentbox"></div>
-            <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
-            <script>
-                commentBox('5673640649555968-proj', {
-                    backgroundColor: '#1a1a1a',
-                    textColor: '#ffffff',
-                    subtextColor: '#9ca3af'
-                })
-            </script>
         </div>
     </div>
 </section>
-<!-- FIM AVALIAÇÕES -->
 
+<!-- Scripts do CommentBox + Customização -->
+<script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
+<script>
+    commentBox('5673640649555968-proj', {
+        backgroundColor: 'transparent',
+        textColor: '#ffffff',
+        subtextColor: '#9ca3af',
+        buttonColor: '#3b82f6',
+        buttonTextColor: '#ffffff',
+        borderColor: '#3b82f6'
+    })
+</script>
+
+<!-- CSS pra deixar bonitão -->
+<style>
+    .commentbox {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    /* Caixa de texto */
+    .commentbox textarea, .commentbox input {
+        background: rgba(30, 41, 59, 0.6) !important;
+        border: 1px solid rgba(59, 130, 246, 0.3) !important;
+        color: #fff !important;
+        border-radius: 12px !important;
+        padding: 14px !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .commentbox textarea:focus, .commentbox input:focus {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+        outline: none !important;
+    }
+    
+    /* Botão de comentar */
+    .commentbox button {
+        background: linear-gradient(to right, #3b82f6, #06b6d4) !important;
+        border: none !important;
+        border-radius: 10px !important;
+        padding: 12px 24px !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+    }
+    
+    .commentbox button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(59, 130, 246, 0.4) !important;
+    }
+    
+    /* Comentários individuais */
+    .commentbox .comment {
+        background: rgba(17, 24, 39, 0.5) !important;
+        border: 1px solid rgba(59, 130, 246, 0.1) !important;
+        border-radius: 12px !important;
+        margin-top: 16px !important;
+    }
+</style>
+<!-- FIM AVALIAÇÕES -->
     <!-- Localização e Horário -->
     <section class="py-16 sm:py-20 px-4 bg-gradient-to-b from-transparent to-black/40">
         <div class="max-w-7xl mx-auto">
