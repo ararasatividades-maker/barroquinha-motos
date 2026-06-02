@@ -576,7 +576,7 @@ function enviarZap(nome, moto, sintoma, diagnostico) {
 
     <div class="section-divider max-w-7xl mx-auto"></div>
 
-    <!-- AVALIAÇÕES COM FACEBOOK -->
+   <!-- AVALIAÇÕES COM FACEBOOK - CORRIGIDO -->
 <section class="py-16 sm:py-20 px-4">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
@@ -586,22 +586,23 @@ function enviarZap(nome, moto, sintoma, diagnostico) {
             <p class="text-gray-400 text-lg">Deixe sua opinião usando seu Facebook</p>
         </div>
         
-        <div class="glass-effect p-8 rounded-xl">
+        <div class="glass-effect p-8 rounded-xl bg-gray-900">
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" 
-                src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0">
+                src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v18.0&appId=966242223397117">
             </script>
             
             <div class="fb-comments" 
                 data-href="https://ararasatividades-maker.github.io/barroquinha-motos/" 
                 data-width="100%" 
                 data-numposts="5"
-                data-colorscheme="dark">
+                data-colorscheme="dark"
+                data-lazy="true">
             </div>
         </div>
     </div>
 </section>
-<!-- FIM AVALIAÇÕES FACEBOOK -->
+<!-- FIM AVALIAÇÕES FACEBOOK --> 
     <div class="section-divider max-w-7xl mx-auto"></div>
 
     <!-- Localização e Horário -->
