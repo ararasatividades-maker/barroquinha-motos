@@ -106,6 +106,106 @@
 </style>
 </head>
 <body>
+    <!-- HEADER TOPO SEM ZAP - BARROQUINHA MOTOS -->
+<header class="fixed top-0 left-0 w-full bg-gray-900/90 backdrop-blur-xl border-b border-blue-500/20 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-motorcycle text-2xl text-blue-400"></i>
+                <span class="text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                    Barroquinha Motos
+                </span>
+            </div>
+
+            <!-- Menu Desktop -->
+            <nav class="hidden md:flex items-center gap-8">
+                
+                <!-- Dropdown Preços -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-gray-300 hover:text-white font-medium transition">
+                        Preços <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-64 bg-gray-800 border border-blue-500/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="p-2">
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero fazer Revisão Completa" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white">Revisão Completa</div>
+                                <div class="text-sm text-green-400">R$ 150 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero orçamento de Montagem de Motor" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white">Montagem Motor</div>
+                                <div class="text-sm text-green-400">R$ 800 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero trocar Lona de Freio" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white">Troca de Lona</div>
+                                <div class="text-sm text-green-400">R$ 60 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero trocar Pastilha de Freio" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white">Troca de Pastilha</div>
+                                <div class="text-sm text-green-400">R$ 50 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dropdown Peças -->
+                <div class="relative group">
+                    <button class="flex items-center gap-1 text-gray-300 hover:text-white font-medium transition">
+                        Peças <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-80 bg-gray-800 border border-blue-500/30 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="p-2">
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Lona de Freio Cobreq" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white"><i class="fas fa-circle text-blue-400 mr-2"></i> Lona Cobreq</div>
+                                <div class="text-sm text-green-400">R$ 35 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Pastilha Fras-le" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white"><i class="fas fa-square text-blue-400 mr-2"></i> Pastilha Fras-le</div>
+                                <div class="text-sm text-green-400">R$ 38 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Retentor de Bengala" target="_blank" class="block px-4 py-3 rounded-lg hover:bg-blue-600/20 transition">
+                                <div class="font-semibold text-white"><i class="fas fa-ring text-blue-400 mr-2"></i> Retentor Bengala</div>
+                                <div class="text-sm text-green-400">R$ 25 <i class="fab fa-whatsapp ml-1"></i></div>
+                            </a>
+                            <a href="https://wa.me/5585999999999?text=Olá! Quero ver mais peças" target="_blank" class="block px-4 py-3 rounded-lg bg-blue-600/30 hover:bg-blue-600/50 transition text-center">
+                                <div class="font-semibold text-blue-300">Ver Catálogo Completo</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Links Simples -->
+                <a href="#contato" class="text-gray-300 hover:text-white font-medium transition">Contato</a>
+                <a href="#localizacao" class="text-gray-300 hover:text-white font-medium transition">Localização</a>
+            </nav>
+
+            <!-- Menu Mobile -->
+            <button id="menuMobile" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="menuMobileAberto" class="hidden md:hidden bg-gray-900 border-t border-blue-500/20">
+        <div class="px-6 py-4 space-y-3">
+            <a href="#precos" class="block text-gray-300 hover:text-white py-2">Preços</a>
+            <a href="#servicos" class="block text-gray-300 hover:text-white py-2">Peças</a>
+            <a href="#contato" class="block text-gray-300 hover:text-white py-2">Contato</a>
+        </div>
+    </div>
+</header>
+
+<!-- Espaço pro header fixo não cobrir o conteúdo -->
+<div class="h-20"></div>
+
+<script>
+document.getElementById('menuMobile').onclick = () => {
+    document.getElementById('menuMobileAberto').classList.toggle('hidden');
+}
+</script>
+<!-- FIM HEADER -->
     <!-- Preload logo for JS access -->
         <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/5585987528176?text=Olá! Gostaria de mais informações sobre os serviços da Barroquinha Motos" 
@@ -735,162 +835,5 @@ function enviarZap(nome, moto, sintoma, diagnostico) {
                                                 </details>
     </div>
 </section>
-
-<!-- BOTÃO FLUTUANTE + MENU LATERAL BARROQUINHA MOTOS -->
-<button id="menuServicos" class="fixed left-4 bottom-6 z-50 bg-gradient-to-r from-blue-600 to-cyan-500 text-white p-4 rounded-full shadow-2xl shadow-blue-500/50 hover:scale-110 transition-all duration-300">
-    <i class="fas fa-tools text-xl"></i>
-</button>
-
-<!-- Menu Lateral -->
-<div id="sidebarMenu" class="fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-r border-blue-500/30 shadow-2xl z-50 transform -translate-x-full transition-transform duration-300 overflow-y-auto">
-    <div class="p-6">
-        <!-- Header -->
-        <div class="flex justify-between items-center mb-8">
-            <h2 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                Barroquinha Motos
-            </h2>
-            <button id="fecharMenu" class="text-gray-400 hover:text-white text-2xl">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-
-        <!-- Tabs -->
-        <div class="flex gap-2 mb-6">
-            <button onclick="mostrarTab('servicos')" id="tabServicos" class="flex-1 py-2 px-4 rounded-lg bg-blue-600 text-white font-semibold">
-                <i class="fas fa-wrench"></i> Serviços
-            </button>
-            <button onclick="mostrarTab('pecas')" id="tabPecas" class="flex-1 py-2 px-4 rounded-lg bg-gray-800 text-gray-300 font-semibold">
-                <i class="fas fa-cog"></i> Peças
-            </button>
-        </div>
-
-        <!-- TAB SERVIÇOS -->
-        <div id="conteudoServicos" class="space-y-3">
-            <div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold">Revisão Completa</span>
-                    <span class="text-green-400 font-bold">R$ 150</span>
-                </div>
-            <div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold">Montagem do Motor</span>
-                    <span class="text-green-400 font-bold">R$ 800</span>
-                </div>
-            </div>
-            <div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold">Troca de Lona</span>
-                    <span class="text-green-400 font-bold">R$ 60</span>
-                </div>
-            </div>
-            <div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold">Troca de Pastilha</span>
-                    <span class="text-green-400 font-bold">R$ 50</span>
-                </div>
-            </div>
-            <div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold">Caixa de Direção</span>
-                    <span class="text-green-400 font-bold">R$ 120</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAB PEÇAS -->
-        <div id="conteudoPecas" class="hidden space-y-3">
-            <div onclick="mostrarMarcas('lonas')" class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20 cursor-pointer hover:bg-gray-700/50 transition">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold"><i class="fas fa-circle text-blue-400 mr-2"></i> Lonas de Freio</span>
-                    <i class="fas fa-chevron-right text-gray-400"></i>
-                </div>
-            <div onclick="mostrarMarcas('pastilhas')" class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20 cursor-pointer hover:bg-gray-700/50 transition">
-                <div class="flex justify-between items-center">
-                    <span class="font-semibold"><i class="fas fa-square text-blue-400 mr-2"></i> Pastilhas</span>
-                    <i class="fas fa-chevron-right text-gray-400"></i>
-                </div>
-            </div>
-        </div>
-
-        <!-- MARCAS DE PEÇAS -->
-        <div id="marcasPecas" class="hidden">
-            <button onclick="voltarPecas()" class="mb-4 text-blue-400 hover:text-blue-300">
-                <i class="fas fa-arrow-left"></i> Voltar
-            </button>
-            <h3 id="tituloPeca" class="text-xl font-bold mb-4 text-blue-400"></h3>
-            <div id="listaMarcas" class="space-y-3"></div>
-        </div>
-    </div>
-</div>
-
-<!-- Overlay -->
-<div id="overlayMenu" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden"></div>
-
-<script>
-const pecas = {
-    lonas: { nome: 'Lonas de Freio', marcas: [
-        { marca: 'Cobreq', preco: 'R$ 35', img: 'https://via.placeholder.com/60x60/3b82f6/fff?text=COB' },
-        { marca: 'Fras-le', preco: 'R$ 42', img: 'https://via.placeholder.com/60x60/06b6d4/fff?text=FRA' }
-    ]},
-    pastilhas: { nome: 'Pastilhas de Freio', marcas: [
-        { marca: 'Cobreq', preco: 'R$ 30', img: 'https://via.placeholder.com/60x60/3b82f6/fff?text=COB' }
-    ]}
-};
-
-document.getElementById('menuServicos').onclick = () => {
-    document.getElementById('sidebarMenu').classList.remove('-translate-x-full');
-    document.getElementById('overlayMenu').classList.remove('hidden');
-}
-document.getElementById('fecharMenu').onclick = fecharMenu;
-document.getElementById('overlayMenu').onclick = fecharMenu;
-
-function fecharMenu() {
-    document.getElementById('sidebarMenu').classList.add('-translate-x-full');
-    document.getElementById('overlayMenu').classList.add('hidden');
-}
-
-function mostrarTab(tab) {
-    if (tab === 'servicos') {
-        document.getElementById('conteudoServicos').classList.remove('hidden');
-        document.getElementById('conteudoPecas').classList.add('hidden');
-        document.getElementById('marcasPecas').classList.add('hidden');
-        document.getElementById('tabServicos').classList.add('bg-blue-600', 'text-white');
-        document.getElementById('tabServicos').classList.remove('bg-gray-800', 'text-gray-300');
-        document.getElementById('tabPecas').classList.remove('bg-blue-600', 'text-white');
-        document.getElementById('tabPecas').classList.add('bg-gray-800', 'text-gray-300');
-    } else {
-        document.getElementById('conteudoServicos').classList.add('hidden');
-        document.getElementById('conteudoPecas').classList.remove('hidden');
-        document.getElementById('marcasPecas').classList.add('hidden');
-        document.getElementById('tabPecas').classList.add('bg-blue-600', 'text-white');
-        document.getElementById('tabPecas').classList.remove('bg-gray-800', 'text-gray-300');
-        document.getElementById('tabServicos').classList.remove('bg-blue-600', 'text-white');
-        document.getElementById('tabServicos').classList.add('bg-gray-800', 'text-gray-300');
-    }
-}
-
-function mostrarMarcas(tipo) {
-    const peca = pecas;
-    document.getElementById('conteudoPecas').classList.add('hidden');
-    document.getElementById('marcasPecas').classList.remove('hidden');
-    document.getElementById('tituloPeca').innerText = peca.nome;
-    let html = '';
-    peca.marcas.forEach(item => {
-        html += `<div class="bg-gray-800/50 p-4 rounded-xl border border-blue-500/20 flex items-center gap-4">
-            <img src="${item.img}" class="w-14 h-14 rounded-lg object-cover" alt="${item.marca}">
-            <div class="flex-1"><div class="font-semibold">${item.marca}</div><div class="text-green-400 font-bold text-lg">${item.preco}</div></div>
-            <a href="https://wa.me/5585999999999?text=Olá! Quero saber sobre ${item.marca} - ${peca.nome}" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg"><i class="fab fa-whatsapp"></i></a>
-        </div>`;
-    });
-    document.getElementById('listaMarcas').innerHTML = html;
-}
-
-function voltarPecas() {
-    document.getElementById('marcasPecas').classList.add('hidden');
-    document.getElementById('conteudoPecas').classList.remove('hidden');
-}
-</script>
-<!-- FIM MENU LATERAL -->
-
 </body>
 </html>
