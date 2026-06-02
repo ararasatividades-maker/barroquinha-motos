@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peças - Barroquinha Motos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-900 text-white">
+    
+    <!-- Header Simples com Voltar -->
+    <header class="bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-gray-300 hover:text-white">
+                <i class="fas fa-arrow-left mr-2"></i> Voltar
+            </a>
+            <h1 class="text-xl font-bold">Catálogo de Peças</h1>
+            <div class="w-16"></div> <!-- Espaço pra centralizar -->
+        </div>
+    </header>
+
+    <!-- Busca -->
+    <div class="max-w-7xl mx-auto px-6 py-6">
+        <input type="text" id="buscaPeca" placeholder="Buscar peça..." 
+               class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-blue-500 outline-none">
+    </div>
+
+    <!-- Grid de Peças -->
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <div id="listaPecas" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            
+            <!-- PEÇA 1 -->
+            <div class="peca-item bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500 transition">
+                <div class="h-48 bg-gray-700 flex items-center justify-center">
+                    <i class="fas fa-circle text-6xl text-gray-500"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Lona de Freio Cobreq</h3>
+                    <p class="text-gray-400 text-sm mb-3">Compatível: CG 125/150/160</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-green-400">R$ 35</span>
+                        <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Lona de Freio Cobreq" target="_blank" 
+                           class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg font-semibold transition">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEÇA 2 -->
+            <div class="peca-item bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500 transition">
+                <div class="h-48 bg-gray-700 flex items-center justify-center">
+                    <i class="fas fa-square text-6xl text-gray-500"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Pastilha Fras-le</h3>
+                    <p class="text-gray-400 text-sm mb-3">Compatível: Titan/Fan 160</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-green-400">R$ 38</span>
+                        <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Pastilha Fras-le" target="_blank" 
+                           class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg font-semibold transition">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEÇA 3 -->
+            <div class="peca-item bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-blue-500 transition">
+                <div class="h-48 bg-gray-700 flex items-center justify-center">
+                    <i class="fas fa-ring text-6xl text-gray-500"></i>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-1">Retentor Bengala</h3>
+                    <p class="text-gray-400 text-sm mb-3">Par - CG/Titan</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-green-400">R$ 25</span>
+                        <a href="https://wa.me/5585999999999?text=Olá! Quero comprar Retentor de Bengala" target="_blank" 
+                           class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg font-semibold transition">
+                            <i class="fab fa-whatsapp"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COPIA E COLA PRA ADICIONAR MAIS PEÇAS -->
+            
+        </div>
+    </div>
+
+    <script>
+    // Busca de peças
+    document.getElementById('buscaPeca').addEventListener('input', function(e) {
+        const termo = e.target.value.toLowerCase();
+        document.querySelectorAll('.peca-item').forEach(item => {
+            const nome = item.querySelector('h3').textContent.toLowerCase();
+            item.style.display = nome.includes(termo) ? 'block' : 'none';
+        });
+    });
+    </script>
+</body>
+</html>
